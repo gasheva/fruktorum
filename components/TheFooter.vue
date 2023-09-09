@@ -15,6 +15,11 @@ footer(:class="$style.footer")
                 div
                     | testblogsupport@gmail.com
                 span(:class="$style['footer-info__icons']")
+                    Icon(:class="$style['footer-info__brand-icon']", name="ic:baseline-facebook")
+                    Icon(:class="$style['footer-info__brand-icon']", name="entypo-social:vk-with-circle")
+                    span(:class="$style['instagram-icon']")
+                        Icon(:class="$style['footer-info__brand-icon']", name="radix-icons:instagram-logo")
+                    Icon(:class="$style['footer-info__brand-icon']", name="ic:baseline-telegram")
         SubscribeFormBlock(:class="$style['footer__subscribe']")
 </template>
 
@@ -50,7 +55,11 @@ footer(:class="$style.footer")
   &__icons {
     display: flex;
     gap: 20px;
+    margin-top: 30px
   }
+    &__brand-icon {
+        font-size: 30px;
+    }
   &__email {
     @include text-secondary;
   }
@@ -72,5 +81,23 @@ footer(:class="$style.footer")
       margin-top: 20px;
     }
   }
+}
+
+.instagram-icon {
+    display: inline-block;
+    width: 30px;
+
+    text-align: center;
+    line-height: 27px;
+    background: $black;
+    border-radius: 50%;
+
+    & > svg {
+        font-size: 20px;
+    }
+
+    & path {
+        color: white;
+    }
 }
 </style>
